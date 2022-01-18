@@ -1,0 +1,20 @@
+SELECT booking_details 
+          FROM booking 
+          WHERE ((end_date BETWEEN '2021-04-26' AND '2021-04-29') OR ('2021-04-26' BETWEEN arrival_date AND end_date) OR (arrival_date BETWEEN '2021-04-26' AND '2021-04-29')) AND ('4' LIKE hotel_vehicle_guide_id AND 'Mymensingh-KA-70' LIKE booking_details)
+
+
+
+SELECT * 
+          FROM booking 
+          WHERE ((end_date BETWEEN '2021-04-30' AND '2021-05-02') OR ('2021-04-30' BETWEEN arrival_date AND end_date) OR (arrival_date BETWEEN '2021-04-30' AND '2021-05-02'))
+
+
+SELECT * FROM booking WHERE ((end_date BETWEEN '2021-04-30' AND '2021-05-02') OR ('2021-04-30' BETWEEN arrival_date AND end_date) OR (arrival_date BETWEEN '2021-04-30' AND '2021-05-02')) AND '1' LIKE booking_details AND 'Aminul Islam' LIKE booking_category
+
+
+
+
+SELECT * FROM booking WHERE ((end_date BETWEEN '2021-04-23' AND '2021-05-26') OR ('2021-04-23' BETWEEN arrival_date AND end_date) OR (arrival_date BETWEEN '2021-04-23' AND '2021-05-26')) AND ('1' LIKE hotel_vehicle_guide_id AND '19967845678' LIKE booking_details)
+
+//show which are paid
+SELECT * FROM booking WHERE ((end_date BETWEEN '2021-04-23' AND '2021-05-26') OR ('2021-04-23' BETWEEN arrival_date AND end_date) OR (arrival_date BETWEEN '2021-04-23' AND '2021-05-26')) AND '19967845678' LIKE booking_details AND payment_status='PAID'

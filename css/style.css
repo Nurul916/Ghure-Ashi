@@ -1,0 +1,355 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.bg-dark {
+  background-color: #04204e !important;
+}
+.navbar-brand {
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 28px;
+}
+.navbar-dark .navbar-nav .nav-link {
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.navbar-dark .navbar-nav .nav-item {
+  margin: 0 15px;
+}
+/* slider css */
+.carousel-item {
+  height: 90vh;
+  min-height: 300px;
+  background: no-repeat scroll center scroll;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+.carousel-item::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #04204e;
+  opacity: 0.5;
+}
+.carousel-caption {
+  bottom: 180px;
+  padding-right: 100px;
+  padding-left: 100px;
+}
+.carousel-caption h5 {
+  font-size: 70px;
+  font-weight: 700;
+}
+.carousel-caption p {
+  font-size: 25px;
+  top: 2rem;
+}
+/* slider css end*/
+
+/*  gallery */
+.sg {
+  margin-top: 2%;
+  margin-bottom: 5%;
+}
+.card1 {
+  position: relative;
+  overflow: hidden;
+}
+.card1::before {
+  position: absolute;
+  content: "";
+  width: 80%;
+  height: 220%;
+  background: rgba(4, 32, 78, 0.7);
+  top: -50%;
+  left: -100%;
+  z-index: 1;
+  transform: rotate(25deg);
+  transform-origin: center top 0;
+  transition: 0.5s;
+}
+.card1:hover::before {
+  left: 10%;
+}
+.card1 img {
+  width: 100%;
+  height: 250px;
+  border-radius: 3%;
+}
+.card1-text {
+  width: 100%;
+  padding: 0 20px;
+  position: absolute;
+  top: -100%;
+  color: #fff;
+  left: 0;
+  z-index: 2;
+  transition: 1.1s;
+}
+.card1-text h2 {
+  font-family: monospace;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.card1:hover .card1-text {
+  top: 80px;
+}
+/* gallery end */
+
+/* service gallery css */
+.hovereffect {
+  width: 100%;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  cursor: default;
+}
+
+.hovereffect .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+
+.hovereffect img {
+  display: block;
+  position: relative;
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+}
+
+.hovereffect:hover img {
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0 0 0 1 0" /><feGaussianBlur stdDeviation="3" /></filter></svg>#filter');
+  filter: grayscale(1) blur(3px);
+  -webkit-filter: grayscale(1) blur(3px);
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.hovereffect h2 {
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  font-size: 17px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.hovereffect a.info {
+  display: inline-block;
+  text-decoration: none;
+  padding: 7px 14px;
+  border: 1px solid #fff;
+  margin: 50px 0 0 0;
+  background: rgba(0, 0, 0, 0.6);
+  /* background-color: transparent; */
+}
+
+.hovereffect a.info:hover {
+  box-shadow: 0 0 5px rgb(22, 22, 22);
+}
+
+.hovereffect a.info,
+.hovereffect h2 {
+  -webkit-transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  transform: scale(0.7);
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.hovereffect:hover a.info,
+.hovereffect:hover h2 {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+/*service gallery css end */
+
+
+/* blog start */
+.img-jumbo {
+  background: linear-gradient(rgba(4, 32, 78, 0.5), rgba(4, 32, 78, 0.5)),
+    url(../image/tu-blog.jpg) no-repeat center center fixed;
+  /* background-repeat: no-repeat;
+  background-size: 100% 100%; */
+  background-size: cover;
+  min-height: 400px;
+  margin: 50px 0 50px 0;
+}
+.bg {
+  font-weight: bold;
+  font-family: monospace;
+  color: #fff;
+  text-transform: uppercase;
+}
+/* blog end */
+
+/* footer css start */
+
+/* .f{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  background: #ede7f6;
+} */
+footer {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 50px 100px;
+  background: #111;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+footer .containerf {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-top: 100px !important;
+}
+footer .containerf .sec {
+  margin-right: 30px;
+}
+footer .containerf .sec.aboutus {
+  width: 40%;
+}
+footer .containerf h2 {
+  position: relative;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+footer .containerf h2::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: #f00;
+}
+footer p {
+  color: #999;
+}
+.sci {
+  margin-top: 20px;
+  display: flex;
+}
+.sci li {
+  list-style: none;
+}
+.sci li a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  text-decoration: none;
+  border-radius: 4px;
+}
+.sci li a:hover {
+  background: #f00;
+}
+.sci li a .fa {
+  color: #fff;
+  font-size: 20px;
+}
+
+.quicklinks {
+  position: relative;
+  width: 25%;
+}
+.quicklinks ul li {
+  list-style: none;
+}
+.quicklinks ul li a {
+  color: #999;
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.quicklinks ul li a:hover {
+  color: #fff;
+}
+
+.contact {
+  width: calc(35%-60px);
+  margin-right: 0;
+}
+.contact .info {
+  position: relative;
+}
+.contact .info li {
+  display: flex;
+  margin-bottom: 16px;
+}
+.contact .info li span:nth-child(1) {
+  color: #fff;
+  font-size: 20px;
+  margin-right: 10px;
+}
+.contact .info li span {
+  color: #999;
+}
+.contact .info li a {
+  color: #999;
+  text-decoration: none;
+}
+.contact .info li a:hover {
+  color: #fff;
+}
+.copyright {
+  width: 100%;
+  background: #181818;
+  padding: 8px 100px;
+  text-align: center;
+  color: #999;
+}
+@media (max-width: 991px) {
+  footer {
+    padding: 40px;
+  }
+  footer .containerf {
+    flex-direction: column;
+  }
+  footer .containerf .sec {
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+  footer .containerf .sec.aboutus,
+  .quicklinks,
+  .contact {
+    width: 100%;
+  }
+  .copyright {
+    padding: 8px 40px;
+  }
+}
+/* footer css end */
